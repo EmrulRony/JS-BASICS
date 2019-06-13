@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+    // Creating object person 
+    var person ={
+        firstName : 'Emrul',
+        lastName : 'Hasan',
+        age:30
+    }
+    // Another way of creating person object
+    /*
+    var person=new Object();
+    person.firstName='Emrul';
+    person.lastName='Hasan';
+    person.age=23;
+    */
+
+    // object person doesn't coppied into x. Infact x and person are the same object
+    // any change in x will also change the person as both are the same object
+    var x=person;
+    x.age=26;
+    document.getElementById("demo").innerHTML ="First Name: "+ person["firstName"] + "<br>"+ "Last Name: "+ person.lastName+ "<br>"+ "Age: "+ person.age ;
+</script>
+
+</html>

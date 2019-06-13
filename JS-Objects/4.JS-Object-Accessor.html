@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>The JavaScript <b>this</b> Keyword</h2>
+
+    <p>In this example, <b>this</b> represents the <b>person</b> object.</p>
+    <p>Because the person object "owns" the fullName method.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // Create an object:
+        var person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 0,
+            set setId(id){
+               this.id=id; 
+            },
+            get getId(){
+                return this.id;
+            },
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // Setting value 
+        person.setId=104;
+
+        // Getting the value
+        document.getElementById("demo").innerHTML = person.getId;
+    </script>
+
+</body>
+
+</html>

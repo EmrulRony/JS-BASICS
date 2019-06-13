@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+function Person(firstName,lastName,age){
+this.firstName=firstName;
+this.lastName=lastName;
+this.age=age;
+}
+Person.prototype.language='English';
+
+Person.prototype.fullName=function(){
+    return this.firstName+ " "+this.lastName;
+}
+var fatherObj = new Person('Emran','Khan',60,'English');
+var motherObj = new Person('Fatema','Zohra',50);
+
+document.getElementById("demo").innerHTML=fatherObj.firstName+", "+fatherObj.lastName+", "
+                                            +fatherObj.age+', '+fatherObj.language+ " , Mothers full name: "+motherObj.fullName();
+console.log(Person.prototype)
+</script>
+</html>

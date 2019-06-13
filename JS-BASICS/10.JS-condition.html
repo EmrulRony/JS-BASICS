@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showGreetuings()">try it!</button>
+    <p id="demo"></p>
+
+</body>
+<script>
+function showGreetuings(){
+    let time=new Date().getTime();
+    let msg='';
+
+    if (time<10){
+         msg="Good Morning";
+    }
+    else if (time>10){
+        msg= "Good afternoon";
+    }
+    else{
+        msg="good eveing";
+    }
+    document.getElementById("demo").innerHTML=msg;
+}
+
+</script>
+</html>
