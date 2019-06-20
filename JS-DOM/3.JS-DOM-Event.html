@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="mybtn" onclick="myFunc()">Click me!</button>
+    <p id="para">Nobody Clicked me yet :(</p>
+</body>
+<script>
+    var btn = document.querySelector("#mybtn");
+    var paragraph = document.querySelector("#para");
+    var isClicked = false;
+
+    // btn.addEventListener("click",function(){
+    //     paragraph.innerHTML="I am clicked :D"
+    // });
+
+    function myFunc() {
+        
+        if (!isClicked) {
+            paragraph.innerHTML = "I am clicked!";
+        }
+        else {
+            paragraph.innerHTML = "Nobody Clicked me yet :(";
+        }
+        isClicked = !isClicked;
+    }
+</script>
+
+</html>

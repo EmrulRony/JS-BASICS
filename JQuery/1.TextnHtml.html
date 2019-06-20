@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title>jquery text</title>
+
+    <style>
+    .correct{
+        color: green;
+    }
+    .wrong{
+        color: red;
+    }
+    .done{
+        color: grey;
+        text-decoration: line-through;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Jquery</h1>
+    <!-- <h1>CSS</h1>
+    <h1>HTMl</h1>
+    <h1>JavaScript</h1> -->
+    <input type="text" placeholder="Enter ur name">
+    <select name="Vendor" id="vendor">
+        <option value="Marvel">Marvel</option>
+        <option value="DC">Dc Comic</option>
+    </select>
+    <button>Click me!</button>
+
+    <ul>
+        <li>Spider man </li>
+        <li>Super man</li>
+        <li>Iron man</li>
+        <li>Captain marvel</li>
+    </ul>
+
+    <script>
+    //     var v = $("h1");
+
+    // // $("h1").click(function(){
+    // //     alert($(this).text());
+    // // });
+
+    $("li").click(function(){
+        $(this).toggleClass("done");
+    });
+
+   $("input").keypress(function(event){
+       if (event.which===13){
+           alert ($(this).val());
+       }
+   });
+
+
+    </script>
+</body>
+
+</html>

@@ -15,16 +15,11 @@ this.firstName=firstName;
 this.lastName=lastName;
 this.age=age;
 }
-Person.prototype.language='English';
 
-Person.prototype.fullName=function(){
-    return this.firstName+ " "+this.lastName;
-}
-var fatherObj = new Person('Emran','Khan',60,'English');
+var fatherObj = new Person('Emran','Khan',60);
 var motherObj = new Person('Fatema','Zohra',50);
 
-document.getElementById("demo").innerHTML=fatherObj.firstName+", "+fatherObj.lastName+", "
-                                            +fatherObj.age+', '+fatherObj.language+ " , Mothers full name: "+motherObj.fullName();
+document.getElementById("demo").innerHTML=fatherObj.firstName+" "+fatherObj.lastName+" "+fatherObj.age;
 console.log(Person.prototype)
 </script>
 </html>
